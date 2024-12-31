@@ -1,0 +1,352 @@
+[
+    {
+        "id": 1,
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "password": "password123",
+        "role": "admin"
+    },
+    {
+        "id": 2,
+        "name": "Jane Smith",
+        "email": "jane.smith@example.com",
+        "password": "password123",
+        "role": "user"
+    },
+    {
+        "id": 3,
+        "name": "Michael Brown",
+        "email": "michael.brown@example.com",
+        "password": "password123",
+        "role": "admin"
+    },
+    {
+        "id": 4,
+        "name": "Emily Davis",
+        "email": "emily.davis@example.com",
+        "password": "password123",
+        "role": "user"
+    },
+    {
+        "id": 5,
+        "name": "William Wilson",
+        "email": "william.wilson@example.com",
+        "password": "password123",
+        "role": "admin"
+    },
+    {
+        "id": 6,
+        "name": "Olivia Garcia",
+        "email": "olivia.garcia@example.com",
+        "password": "password123",
+        "role": "user"
+    },
+    {
+        "id": 7,
+        "name": "James Martinez",
+        "email": "james.martinez@example.com",
+        "password": "password123",
+        "role": "admin"
+    },
+    {
+        "id": 8,
+        "name": "Sophia Anderson",
+        "email": "sophia.anderson@example.com",
+        "password": "password123",
+        "role": "user"
+    },
+    {
+        "id": 9,
+        "name": "Benjamin Thomas",
+        "email": "benjamin.thomas@example.com",
+        "password": "password123",
+        "role": "admin"
+    },
+    {
+        "id": 10,
+        "name": "Isabella Taylor",
+        "email": "isabella.taylor@example.com",
+        "password": "password123",
+        "role": "user"
+    },
+    {
+        "id": 11,
+        "name": "Daniel White",
+        "email": "daniel.white@example.com",
+        "password": "password123",
+        "role": "admin"
+    },
+    {
+        "id": 12,
+        "name": "Mia Harris",
+        "email": "mia.harris@example.com",
+        "password": "password123",
+        "role": "user"
+    },
+    {
+        "id": 13,
+        "name": "Matthew Lewis",
+        "email": "matthew.lewis@example.com",
+        "password": "password123",
+        "role": "admin"
+    },
+    {
+        "id": 14,
+        "name": "Charlotte Martin",
+        "email": "charlotte.martin@example.com",
+        "password": "password123",
+        "role": "user"
+    },
+    {
+        "id": 15,
+        "name": "Ethan Allen",
+        "email": "ethan.allen@example.com",
+        "password": "password123",
+        "role": "admin"
+    },
+    {
+        "id": 16,
+        "name": "Harper Scott",
+        "email": "harper.scott@example.com",
+        "password": "password123",
+        "role": "user"
+    },
+    {
+        "id": 17,
+        "name": "Alexander Lee",
+        "email": "alexander.lee@example.com",
+        "password": "password123",
+        "role": "admin"
+    },
+    {
+        "id": 18,
+        "name": "Ella Young",
+        "email": "ella.young@example.com",
+        "password": "password123",
+        "role": "user"
+    },
+    {
+        "id": 19,
+        "name": "Aiden King",
+        "email": "aiden.king@example.com",
+        "password": "password123",
+        "role": "admin"
+    },
+    {
+        "id": 20,
+        "name": "Lily Lopez",
+        "email": "lily.lopez@example.com",
+        "password": "password123",
+        "role": "user"
+    },
+    {
+        "id": 21,
+        "name": "Logan Hill",
+        "email": "logan.hill@example.com",
+        "password": "password123",
+        "role": "admin"
+    },
+    {
+        "id": 22,
+        "name": "Aria Adams",
+        "email": "aria.adams@example.com",
+        "password": "password123",
+        "role": "user"
+    },
+    {
+        "id": 23,
+        "name": "Mason Allen",
+        "email": "mason.allen@example.com",
+        "password": "password123",
+        "role": "admin"
+    },
+    {
+        "id": 24,
+        "name": "Amelia White",
+        "email": "amelia.white@example.com",
+        "password": "password123",
+        "role": "user"
+    },
+    {
+        "id": 25,
+        "name": "Jacob Harris",
+        "email": "jacob.harris@example.com",
+        "password": "password123",
+        "role": "admin"
+    },
+    {
+        "id": 26,
+        "name": "Ava Martin",
+        "email": "ava.martin@example.com",
+        "password": "password123",
+        "role": "user"
+    },
+    {
+        "id": 27,
+        "name": "Jayden Lewis",
+        "email": "jayden.lewis@example.com",
+        "password": "password123",
+        "role": "admin"
+    },
+    {
+        "id": 28,
+        "name": "Scarlett Taylor",
+        "email": "scarlett.taylor@example.com",
+        "password": "password123",
+        "role": "user"
+    },
+    {
+        "id": 29,
+        "name": "Jackson Martin",
+        "email": "jackson.martin@example.com",
+        "password": "password123",
+        "role": "admin"
+    },
+    {
+        "id": 30,
+        "name": "Evelyn Scott",
+        "email": "evelyn.scott@example.com",
+        "password": "password123",
+        "role": "user"
+    },
+    {
+        "id": 31,
+        "name": "Lucas Allen",
+        "email": "lucas.allen@example.com",
+        "password": "password123",
+        "role": "admin"
+    },
+    {
+        "id": 32,
+        "name": "Grace White",
+        "email": "grace.white@example.com",
+        "password": "password123",
+        "role": "user"
+    },
+    {
+        "id": 33,
+        "name": "Gabriel Harris",
+        "email": "gabriel.harris@example.com",
+        "password": "password123",
+        "role": "admin"
+    },
+    {
+        "id": 34,
+        "name": "Zoey Martin",
+        "email": "zoey.martin@example.com",
+        "password": "password123",
+        "role": "user"
+    },
+    {
+        "id": 35,
+        "name": "Nathan Taylor",
+        "email": "nathan.taylor@example.com",
+        "password": "password123",
+        "role": "admin"
+    },
+    {
+        "id": 36,
+        "name": "Landon Adams",
+        "email": "landon.adams@example.com",
+        "password": "password123",
+        "role": "user"
+    },
+    {
+        "id": 37,
+        "name": "Jameson Allen",
+        "email": "jameson.allen@example.com",
+        "password": "password123",
+        "role": "admin"
+    },
+    {
+        "id": 38,
+        "name": "Lila White",
+        "email": "lila.white@example.com",
+        "password": "password123",
+        "role": "user"
+    },
+    {
+        "id": 39,
+        "name": "Eli Harris",
+        "email": "eli.harris@example.com",
+        "password": "password123",
+        "role": "admin"
+    },
+    {
+        "id": 40,
+        "name": "Violet Martin",
+        "email": "violet.martin@example.com",
+        "password": "password123",
+        "role": "user"
+    },
+    {
+        "id": 41,
+        "name": "Isaiah Taylor",
+        "email": "isaiah.taylor@example.com",
+        "password": "password123",
+        "role": "admin"
+    },
+    {
+        "id": 42,
+        "name": "Hazel Adams",
+        "email": "hazel.adams@example.com",
+        "password": "password123",
+        "role": "user"
+    },
+    {
+        "id": 43,
+        "name": "Cameron Allen",
+        "email": "cameron.allen@example.com",
+        "password": "password123",
+        "role": "admin"
+    },
+    {
+        "id": 44,
+        "name": "Madison White",
+        "email": "madison.white@example.com",
+        "password": "password123",
+        "role": "user"
+    },
+    {
+        "id": 45,
+        "name": "Aaliyah Harris",
+        "email": "aaliyah.harris@example.com",
+        "password": "password123",
+        "role": "admin"
+    },
+    {
+        "id": 46,
+        "name": "Ryan Martin",
+        "email": "ryan.martin@example.com",
+        "password": "password123",
+        "role": "user"
+    },
+    {
+        "id": 47,
+        "name": "Hunter Taylor",
+        "email": "hunter.taylor@example.com",
+        "password": "password123",
+        "role": "admin"
+    },
+    {
+        "id": 48,
+        "name": "Elijah Adams",
+        "email": "elijah.adams@example.com",
+        "password": "password123",
+        "role": "user"
+    },
+    {
+        "id": 49,
+        "name": "Bella Allen",
+        "email": "bella.allen@example.com",
+        "password": "password123",
+        "role": "admin"
+    },
+    {
+        "id": 50,
+        "name": "Joshua White",
+        "email": "joshua.white@example.com",
+        "password": "password123",
+        "role": "user"
+    }
+]
