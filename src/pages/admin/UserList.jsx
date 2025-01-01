@@ -276,11 +276,11 @@ import {
   PaginationNext,
   PaginationEllipsis,
   generatePageNumbers
-} from "@/components/ui/pagination";
+} from "@/components/ui/Pagination";
 import { fetchUserData } from "@/services/users/fetchUserData";
 import Spinner from "@/components/spinner/Spinner";
-import { Input } from "@/components/ui/input";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Input } from "@/components/ui/Input";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/Tooltip";
 
 const UserList = () => {
   const [page, setPage] = useState(1);

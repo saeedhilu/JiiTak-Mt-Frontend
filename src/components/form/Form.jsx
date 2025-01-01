@@ -110,9 +110,9 @@
 // export default FormComponent;
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/Button";
+import { Input } from "@/components/ui/Input";
+import { Label } from "@/components/ui/Label";
 import Spinner from "../spinner/Spinner";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardTitle, CardDescription } from '@/components/ui/card';
+import { Button } from '@/components/ui/Button';
+import { Card, CardContent, CardTitle, CardDescription } from '@/components/ui/Card';
 
 class ErrorBoundary extends React.Component {
   constructor(props) {

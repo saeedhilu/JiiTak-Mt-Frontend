@@ -5,7 +5,7 @@ import {
     CardTitle,
     CardDescription,
     CardContent,
-} from "@/components/ui/card";
+} from "@/components/ui/Card";
 import GenderAgeBarChart from "@/components/analytics/AgeCharts";
 import SummaryStatics from "@/components/analytics/SummaryStaticsCards";
 const cardData = [
