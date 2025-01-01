@@ -10,6 +10,7 @@ import LoginPage from './pages/auth/Login';
 import { Toaster } from 'sonner';
 import PasswordReset from './pages/auth/PasswordResetEmail';
 import PasswordResetPage from './pages/auth/PasswordResetPage';
+import SplashScreen from './components/splash/Splash';
 
 const AdminRoutes = lazy(() => import('./routes/AdminRoutes'));
 const UserRoutes = lazy(() => import('./routes/UserRoutes'));
@@ -18,39 +19,39 @@ function App() {
   const queryClient = new QueryClient();
 
   return (
-    <ErrorBoundary>
-      <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
-          <Router>
-            <QueryClientProvider client={queryClient}>
-              <Toaster richColors position="bottom-center" />
-              <Routes>
-                <Route
-                  path="/admin/*"
-                  element={
-                    <Suspense fallback={<div>Loading Admin...</div>}>
+    <Suspense fallback={<SplashScreen />}>
+      <ErrorBoundary>
+        <Provider store={store}>
+          <PersistGate loading={null} persistor={persistor}>
+            <Router>
+              <QueryClientProvider client={queryClient}>
+                <Toaster richColors position="bottom-center" />
+                <Routes>
+                  <Route
+                    path="/admin/*"
+                    element={
+
                       <AdminRoutes />
-                    </Suspense>
-                  }
-                />
-                <Route
-                  path="/user/*"
-                  element={
-                    <Suspense fallback={<div>Loading User...</div>}>
+
+                    }
+                  />
+                  <Route
+                    path="/user/*"
+                    element={
                       <UserRoutes />
-                    </Suspense>
-                  }
-                />
-                <Route path="/reset-password" element={<PasswordReset />} />
-                <Route path="/reset-password/:uid" element={<PasswordResetPage />} />
-                <Route path="/login" element={<LoginPage />} />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </QueryClientProvider>
-          </Router>
-        </PersistGate>
-      </Provider>
-    </ErrorBoundary>
+                    }
+                  />
+                  <Route path="/reset-password" element={<PasswordReset />} />
+                  <Route path="/reset-password/:uid" element={<PasswordResetPage />} />
+                  <Route path="/login" element={<LoginPage />} />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </QueryClientProvider>
+            </Router>
+          </PersistGate>
+        </Provider>
+      </ErrorBoundary>
+    </Suspense>
   );
 }
 
