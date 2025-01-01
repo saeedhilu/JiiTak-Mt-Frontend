@@ -266,7 +266,7 @@ import {
   TableRow,
   TableHead,
   TableCell,
-} from "@/components/ui/Table";
+} from "@/components/ui/table";
 import {
   Pagination,
   PaginationContent,
@@ -276,11 +276,11 @@ import {
   PaginationNext,
   PaginationEllipsis,
   generatePageNumbers
-} from "@/components/ui/Pagination";
+} from "@/components/ui/pagination";
 import { fetchUserData } from "@/services/users/fetchUserData";
 import Spinner from "@/components/spinner/Spinner";
-import { Input } from "@/components/ui/Input";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/Tooltip";
+import { Input } from "@/components/ui/input";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const UserList = () => {
   const [page, setPage] = useState(1);

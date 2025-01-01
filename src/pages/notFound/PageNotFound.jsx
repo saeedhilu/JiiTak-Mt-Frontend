@@ -1,6 +1,6 @@
 import React from 'react';
 import NotFoundImage from "../../assets/404.gif";
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 
 const NotFound = () => {
     return (

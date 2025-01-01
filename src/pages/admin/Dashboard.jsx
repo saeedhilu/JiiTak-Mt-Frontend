@@ -5,9 +5,9 @@ import {
     CardTitle,
     CardDescription,
     CardContent,
-} from "@/components/ui/Card";
-import GenderAgeBarChart from "@/components/analytics/AgeCharts";
-import SummaryStatics from "@/components/analytics/SummaryStaticsCards";
+} from "@/components/ui/card";
+import GenderAgeBarChart from "@/charts/AgeCharts";
+import SummaryStatics from "@/charts/SummaryStaticsCards";
 const cardData = [
     // Dummy Data 
     {

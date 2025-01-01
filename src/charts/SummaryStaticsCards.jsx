@@ -5,7 +5,7 @@ import {
     CardTitle,
     CardDescription,
     CardContent,
-} from "../ui/Card";
+} from "../components/ui/card";
 import GenderAgeBarChart from "./AgeCharts";
 
 const cardData = [

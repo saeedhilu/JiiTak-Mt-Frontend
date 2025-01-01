@@ -1,4 +1,4 @@
-import instance from "../../utils/AxiosInstance";
+import instance from "../utils/AxiosInstance";
 
 const LoginService = async (loginData) => {
 
