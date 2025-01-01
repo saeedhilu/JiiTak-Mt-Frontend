@@ -1,10 +1,10 @@
 import axios from 'axios';
-import store from '../../redux/store/Store'
+import store from '../redux/store/Store'
 import { clearAuth, updateToken } from '@/redux/slice/authSlice';
 import { useNavigate } from 'react-router-dom';
 
 const instance = axios.create({
-    baseURL: 'http://127.0.0.1:8000/',
+    baseURL: 'https://jii-tak-mt-backend-i5gg.vercel.app/',
     headers: { 'Content-Type': 'application/json' },
 });
 

@@ -9,11 +9,11 @@ const AdminLayout = () => {
             <Navbar color="white" aria-label="Main navigation" />
 
             <div className="flex flex-1 h-96">
-                <aside className="w-64  bg-gray-100 border-r border-gray-200">
+                <aside className="w-64 hidden lg:flex       bg-gray-100 border-r border-gray-200">
                     <SidebarComponent />
                 </aside>
 
-                <main className="flex-1 p-4 overflow-hidden">
+                <main className="flex-1  p-4 overflow-auto">
                     <Outlet />
                 </main>
             </div>
