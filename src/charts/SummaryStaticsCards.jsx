@@ -6,42 +6,41 @@ import {
     CardDescription,
     CardContent,
 } from "../components/ui/card";
-import GenderAgeBarChart from "./AgeCharts";
 
 const cardData = [
 
     {
         id: 1,
-        title: "ユーザー登録数累計", // Total User Registrations
-        value: "450人", // 450 users
-        description: "400人 (前月分比較)", // 400 users (Previous month)
-        highlight: "+12.5%", // Increase by 12.5%
-        isPositive: true, // Indicates positive growth
+        title: "ユーザー登録数累計",
+        value: "450人",
+        description: "400人 (前月分比較)",
+        highlight: "+12.5%",
+        isPositive: true,
     },
     {
         id: 2,
-        title: "アクティブユーザー", // Active Users
-        value: "50人 / 今月", // 50 users this month
-        description: "12人 (前月分比較)", // 12 users (Previous month)
-        highlight: "+316.6%", // Increase by 316.6%
+        title: "アクティブユーザー",
+        value: "50人 / 今月",
+        description: "12人 (前月分比較)",
+        highlight: "+316.6%",
         text: "2024年2月1日 - 2024年2月5日",
         isPositive: true,
     },
     {
         id: 3,
-        title: "定着率", // Retention Rate
-        value: "10% / 今月", // 10% this month
-        description: "12% (前月分比較)", // 12% (Previous month)
-        highlight: "-16.6%", // Decrease by 16.6%
+        title: "定着率",
+        value: "10% / 今月",
+        description: "12% (前月分比較)",
+        highlight: "-16.6%",
         text: "2024年1月1日 - 2024年1月31日",
         isPositive: false,
     },
     {
         id: 4,
-        title: "平均換回数", // Average Visits
-        value: "4回 / 今月", // 4 times this month
-        description: "2回 (前月の今日時点)", // 2 times (As of the same day last month)
-        highlight: "+100%", // Increase by 100%
+        title: "平均換回数",
+        value: "4回 / 今月",
+        description: "2回 (前月の今日時点)",
+        highlight: "+100%",
         text: "2024年2月1日 - 2024年2月5日",
         isPositive: true,
     },
@@ -50,7 +49,6 @@ const cardData = [
 const SummaryStatics = () => {
     return (
         <div className=" bg-background pl-6 pr-6">
-            {/* Cards Section */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 mb-8">
                 {cardData.map((card) => (
 
@@ -61,7 +59,7 @@ const SummaryStatics = () => {
                             <CardDescription className="text-sm font-thin" >{card.text ? card.text : ""}</CardDescription>
                         </CardHeader>
                         <CardContent>
-                            <p className="text-xl font-bold">{card.value ?  card.value : '-'}</p>
+                            <p className="text-xl font-bold">{card.value ? card.value : '-'}</p>
                             <div
                                 className="flex justify-between"
                             >
@@ -73,8 +71,6 @@ const SummaryStatics = () => {
                     </Card>
                 ))}
             </div>
-
-
         </div>
     );
 };

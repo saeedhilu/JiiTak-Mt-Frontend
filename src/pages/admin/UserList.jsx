@@ -38,7 +38,7 @@ const UserList = () => {
   if (error) return <div className="text-red-500">Error loading user data</div>;
 
   const { results: users, count, next, previous } = usersData || {};
-  const totalPages = Math.ceil(count / 10); // Assuming 10 items per page
+  const totalPages = Math.ceil(count / 10);
 
   const handlePageChange = (newPage) => {
     if (newPage >= 1 && newPage <= totalPages) {

@@ -8,8 +8,10 @@ import {
 } from "@/components/ui/card";
 import GenderAgeBarChart from "@/charts/AgeCharts";
 import SummaryStatics from "@/charts/SummaryStaticsCards";
+
+
 const cardData = [
-    // Dummy Data 
+
     {
         id: 5,
         title: "抽選利用回数",
@@ -59,8 +61,6 @@ const Dashboard = () => {
                     <div className=" first bg-white shadow-md rounded-lg p-6">
                         <GenderAgeBarChart />
                     </div>
-
-
                 </div>
             </div>
         </>

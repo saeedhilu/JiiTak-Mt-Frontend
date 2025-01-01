@@ -13,14 +13,12 @@ const PasswordReset = () => {
 
 
     const onSubmit = async (data) => {
-        console.log('====================================');
-        console.log('sssssss :', data);
-        console.log('====================================');
+    
         try {
             isLoading(true)
             const response = await ResetEmailLinkServices(data);
             console.log('====================================');
-            console.log('Response darta for fething is :',response);
+            console.log('Response darta for fething is :', response);
             console.log('====================================');
             showToast("パスワード再設定用URLを送信しました", "success");
 
@@ -46,8 +44,8 @@ const PasswordReset = () => {
             onSubmit={onSubmit}
             submitText="パスワード再設定用URLを送信する"
             error={error}
-            text="ログイン画面にもどる" 
-            link="/user/login"
+            text="ログイン画面にもどる"
+            link="/login"
         />
     )
 }

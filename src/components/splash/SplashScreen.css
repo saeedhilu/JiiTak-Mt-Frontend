@@ -1,0 +1,32 @@
+/* SplashScreen.css */
+.splash-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #f8f5f0;
+  z-index: 9999;
+}
+
+.logo {
+  width: 150px;
+  height: auto; 
+  animation: waveAnimation 3s infinite ease-in-out;
+}
+
+@keyframes waveAnimation {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg); 
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}

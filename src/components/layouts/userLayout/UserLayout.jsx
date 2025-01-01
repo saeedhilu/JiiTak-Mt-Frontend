@@ -6,10 +6,10 @@ const UserLayout = () => {
     return (
         <div className="user-layout ">
             <div className="navbar-container h-20">
-                <Navbar /> {/* Render Navbar */}
+                <Navbar />
             </div>
             <div className=" ">
-                <Outlet /> {/* Render the child routes here */}
+                <Outlet />
             </div>
         </div>
     );

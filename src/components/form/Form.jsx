@@ -131,9 +131,7 @@ const FormComponent = ({ fields, schema, onSubmit, title, notes, submitText, err
   const togglePasswordVisibility = () => {
     setShowPassword((prev) => !prev);
   };
-  console.log('====================================');
-  console.log('EEEEEEEEEEEEE', error);
-  console.log('====================================');
+
   return (
     <div className="flex items-center justify-center min-h-full pt-28">
       <div className="w-full max-w-md p-8 rounded-md">
@@ -155,9 +153,8 @@ const FormComponent = ({ fields, schema, onSubmit, title, notes, submitText, err
                   type={showPassword && field.type === "password" ? "text" : field.type}
                   placeholder={field.placeholder}
                   {...register(field.name)}
-                  className={`mt-2 text-sm ${
-                    errors[field.name] ? "border-red-500" : ""
-                  }`}
+                  className={`mt-2 text-sm ${errors[field.name] ? "border-red-500" : ""
+                    }`}
                 />
                 {field.type === "password" && (
                   <span
@@ -175,7 +172,7 @@ const FormComponent = ({ fields, schema, onSubmit, title, notes, submitText, err
               )}
               {errors[field.name] && (
                 <p className="text-sm text-red-500 mt-1">
-                  {errors[field.name]?.message || error?.response?.data.error?.[0] }
+                  {errors[field.name]?.message || error?.response?.data.error?.[0]}
                 </p>
               )}
             </div>

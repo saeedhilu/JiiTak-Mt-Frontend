@@ -1,5 +1,5 @@
 import ClipLoader from "react-spinners/ClipLoader";
-
+import PropTypes from 'prop-types';
 function Spinner({ color = "white" }) {
     const override = {
         borderWidth: "3px",
@@ -17,6 +17,9 @@ function Spinner({ color = "white" }) {
             />
         </div>
     );
+    
 }
-
+Spinner.propTypes = {
+    color: PropTypes.string,
+};
 export default Spinner;

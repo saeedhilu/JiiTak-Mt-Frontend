@@ -26,9 +26,9 @@ export default function LoginPage() {
       dispatch(login(response));
       navigate("/user/home");
     } catch (error) {
-    console.log('====================================');
-    console.log('1111111111111111111111111111111111',error);
-    console.log('====================================');
+      console.log('====================================');
+      console.log('1111111111111111111111111111111111', error);
+      console.log('====================================');
       setError(error)
       showToast(error.response.data.email ? error.response.data.email[0] : error.response.data.password[0], "error");
     } finally {

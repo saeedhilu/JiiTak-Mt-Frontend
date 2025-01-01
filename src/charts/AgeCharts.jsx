@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"; 
+import React, { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import {
   BarChart,
@@ -56,11 +56,11 @@ function GenderAgeBarChart() {
         setChartWidth(523);
       } else if (window.innerWidth > 540) {
         setChartWidth(450);
-      } else if(window.innerWidth > 470){
+      } else if (window.innerWidth > 470) {
         setChartWidth(350);
-      }else if(window.innerWidth > 407){
+      } else if (window.innerWidth > 407) {
         setChartWidth(290)
-      }else{
+      } else {
         setChartWidth(250)
       }
     };
@@ -72,12 +72,12 @@ function GenderAgeBarChart() {
     `${currentYear}-01`
   );
   const [selectedMonth, setSelectedMonth] = useState(months[0]);
-  const chartData = dataByMonth[selectedMonth] || []; 
+  const chartData = dataByMonth[selectedMonth] || [];
 
   const handleDateChange = (e) => {
     const selectedDate = e.target.value;
     setSelectedDate(selectedDate);
-    setSelectedMonth(selectedDate); 
+    setSelectedMonth(selectedDate);
   };
 
   const hasData = chartData.length > 0;
@@ -101,7 +101,7 @@ function GenderAgeBarChart() {
       </div>
 
       <BarChart
-        
+
         width={chartWidth}
         height={255}
         data={hasData ? chartData : [{ ageGroup: "No Data Available", male: 0, female: 0, other: 0, none: 0 }]}

@@ -3,13 +3,13 @@ import useToast from "@/hooks/UseToast";
 import FormComponent from "@/components/form/Form";
 import { ResetSchema } from "@/components/form/validationSchema";
 import { useState } from "react";
-import {useNavigate, useParams} from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import ResetEmailLinkVerifyServices from "@/services/users/ResetEmailVerifyServices";
 
 const PasswordResetPage = () => {
 
     const navigate = useNavigate();
-    const {uid} = useParams();
+    const { uid } = useParams();
     const showToast = useToast();
     const [error, setError] = useState('')
     const [loading, isLoading] = useState(false)
@@ -23,14 +23,14 @@ const PasswordResetPage = () => {
             console.log('====================================');
             console.log('not match');
             console.log('====================================');
-            showToast('password is not match','error')
-        }else{
+            showToast('password is not match', 'error')
+        } else {
             try {
                 isLoading(true)
                 const response = await ResetEmailLinkVerifyServices(uid, data.password);
                 showToast("パスワード再設定用URLを送信しました", "success");
                 navigate('user/login')
-                
+
             } catch (error) {
                 console.log('Error from page is :', error);
                 setError(error)
@@ -39,7 +39,7 @@ const PasswordResetPage = () => {
                 isLoading(false)
             }
         }
-        
+
     };
     const [showPassword, isShowPassword] = useState(false)
 

@@ -19,7 +19,7 @@ const AdminLayout = () => {
                 <div className='lg:w-64'>
                 <SidebarComponent isOpen={showSidebar} toggleSidebar={toggleSidebar} />
 
-                </div>
+            </div>
 
                 {!showSidebar && (
                     <div className="lg:hidden  absolute top-4 left-4 z-50">
