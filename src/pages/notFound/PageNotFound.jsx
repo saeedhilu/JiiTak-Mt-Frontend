@@ -12,7 +12,7 @@ const NotFound = () => {
             />
             <h1 className="text-3xl font-extrabold text-gray-900 dark:text-white">404 - Page Not Found</h1>
             <p className="text-lg text-gray-600 dark:text-gray-300">
-                Sorry, the page you are looking for does not exist.
+                Sorry, the page you are looking for does not exist
             </p>
             <Button>
             <a
