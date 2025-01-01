@@ -1,4 +1,4 @@
-import instance from '../utils/AxiosInstance';
+import instance from '../../utils/AxiosInstance';
 
 export const fetchUserData = async (page = 1, searchTerm = "") => {
   try {

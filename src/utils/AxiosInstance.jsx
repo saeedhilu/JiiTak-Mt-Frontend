@@ -1,7 +1,7 @@
 import axios from 'axios';
-import store from '../../redux/store/Store'
-import { clearAuth, updateToken } from '@/redux/slice/authSlice';
-import { useNavigate } from 'react-router-dom';
+import store from '../redux/store/Store'
+import { clearAuth, updateToken } from '@/redux/slice/AuthSlice';
+import userRoutes from '@/routes/UserRoutes';
 
 const instance = axios.create({
     baseURL: 'https://jii-tak-mt-backend-i5gg.vercel.app/',
@@ -45,7 +45,9 @@ const refreshToken = async () => {
     } catch (error) {
         console.error('Failed to refresh token:', error);
         store.dispatch(clearAuth()); // Clear auth state
-        const navigate = useNavigate();
+        
+
+        const { navigate} = userRoutes
         navigate('/session-expired');  // Redirect to session expired page
         return null;
     }
