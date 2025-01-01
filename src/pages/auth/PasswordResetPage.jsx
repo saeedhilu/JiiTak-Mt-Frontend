@@ -23,21 +23,23 @@ const PasswordResetPage = () => {
             console.log('====================================');
             console.log('not match');
             console.log('====================================');
-            setError('password is not match')
+            showToast('password is not match','error')
+        }else{
+            try {
+                isLoading(true)
+                const response = await ResetEmailLinkVerifyServices(uid, data.password);
+                showToast("パスワード再設定用URLを送信しました", "success");
+                navigate('user/login')
+                
+            } catch (error) {
+                console.log('Error from page is :', error);
+                setError(error)
+                showToast(error?.response?.data?.error, "error");
+            } finally {
+                isLoading(false)
+            }
         }
-        try {
-            isLoading(true)
-            const response = await ResetEmailLinkVerifyServices(uid, data.password);
-            showToast("パスワード再設定用URLを送信しました", "success");
-
-
-        } catch (error) {
-            console.log('Error from page is :', error);
-            setError(error)
-            showToast(error?.response?.data?.error, "error");
-        } finally {
-            isLoading(false)
-        }
+        
     };
     const [showPassword, isShowPassword] = useState(false)
 

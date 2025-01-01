@@ -6,7 +6,7 @@ function Spinner({ color = "white" }) {
     };
 
     return (
-        <div className="sweet-loading flex items-center justify-center min-h-screen">
+        <div className="sweet-loading flex items-center justify-center ">
             <ClipLoader
                 speedMultiplier={0.7}
                 color={color}

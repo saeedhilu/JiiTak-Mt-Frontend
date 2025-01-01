@@ -68,7 +68,8 @@ module.exports = {
     extend: {
       screens: {	
         xxl: "1470px",
-		xxk1:"1024px"
+		xxk1:"1024px",
+		xxk2 : "1200px"
         // => @media (min-width: 1470px) { ... }
       },
       borderRadius: {

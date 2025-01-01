@@ -34,13 +34,9 @@ const Dashboard = () => {
     return (
         <>
             <SummaryStatics />
-            <div className="bg-background pl-6 pr-6 xxk1:bg-red-950">
-                <div className="flex flex-col xxk1:flex-col xxl:flex-row  lg:bg-green-400   gap-6">
-                    <div className=" first bg-white shadow-md rounded-lg p-6 xxl:bg-black     ">
-                        <GenderAgeBarChart />
-                    </div>
-
-                    <div className="second flex bg-indigo-500 flex-col sm:flex-row   lg:flex-row md:bg-violet-700 lg:bg-red-500  xxl:bg-yellow-200 xxl:flex-row gap-6 w-full   h-44">
+            <div className="bg-background pl-6 pr-6 ">
+                <div className="flex flex-col  xxk2:flex-row    gap-6">
+                    <div className="second flex  flex-col sm:flex-row  xxl:order-2  lg:flex-col xxk2:order-2   xxl:flex-row gap-6 w-full   h-44">
                         {cardData.map((card) => (
                             <Card key={card.id} className="flex-1">
                                 <CardHeader>
@@ -60,6 +56,11 @@ const Dashboard = () => {
                             </Card>
                         ))}
                     </div>
+                    <div className=" first bg-white shadow-md rounded-lg p-6">
+                        <GenderAgeBarChart />
+                    </div>
+
+
                 </div>
             </div>
         </>

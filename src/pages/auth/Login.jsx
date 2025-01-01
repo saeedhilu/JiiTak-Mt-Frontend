@@ -13,42 +13,42 @@ export default function LoginPage() {
   const showToast = useToast();
   const navigate = useNavigate();
   const dispatch = useDispatch();
-    const [error , setError ] = useState('')
-    const [loading, isLoading ] = useState(false)
-    console.log("State is :", error);
-    
+  const [error, setError] = useState('')
+  const [loading, isLoading] = useState(false)
+  console.log("State is :", error);
+
   const onSubmit = async (data) => {
-    console.log('====================================');
-    console.log('R :', data);
-    console.log('====================================');
+
     try {
-        isLoading(true)
+      isLoading(true)
       const response = await LoginService(data);
       showToast("Login successful", "success");
       dispatch(login(response));
       navigate("/user/home");
     } catch (error) {
-        console.log('Error from page is :',error);
-        setError(error)
-      showToast(error,"error");
-    }finally{
-        isLoading(false)
+    console.log('====================================');
+    console.log('1111111111111111111111111111111111',error);
+    console.log('====================================');
+      setError(error)
+      showToast(error.response.data.email ? error.response.data.email[0] : error.response.data.password[0], "error");
+    } finally {
+      isLoading(false)
     }
   };
 
   return (
     <FormComponent
-    loading={isLoading}
-      title="Login"
+      loading={isLoading}
+      title="ログイン"
       fields={[
-        { name: "email", type: "email", label: "Email", placeholder: "Enter your email" },
-        { name: "password", type: "password", label: "Password", placeholder: "Enter your password" },
+        { name: "email", type: "email", label: "メールアドレス", placeholder: "" },
+        { name: "password", type: "password", label: "パスワード", placeholder: "" },
       ]}
       schema={LoginSchema}
       onSubmit={onSubmit}
-      submitText="Login"
-      error = {error}
-      text="Forgot your password?"
+      submitText="ログイン"
+      error={error}
+      text="パスワードをお忘れの場合"
       link="/reset-password"
     />
   );

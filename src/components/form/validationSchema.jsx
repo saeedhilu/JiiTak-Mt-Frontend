@@ -5,13 +5,13 @@ import { z } from "zod";
 
 export const ResetSchema = z.object({
   password: z.string()
-    .min(8, "Password must be at least 8 characters long.")
-    .max(20, "Password cannot exceed 20 characters.")
-    .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/, "Password must include at least one lowercase letter, one uppercase letter, and one number."),
+    .min(8, "パスワードは 8 文字以上にすることはできません。")
+    .max(20, "パスワードの確認は20文字を超えてはなりません.")
+    .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/, "パスワードには、少なくとも 1 つの小文字、1 つの大文字、および 1 つの数字を含める必要があります。"),
   
   confirmPassword: z.string()
-    .min(8, "Confirm password must be at least 8 characters long.")
-    .max(20, "Confirm password cannot exceed 20 characters.")
+    .min(8, "パスワードの確認は 8 文字以上にする必要があります。")
+    .max(20, "パスワードの確認は20文字を超えてはなりません.")
     
 });
 
@@ -21,13 +21,13 @@ export const ResetSchema = z.object({
 // ---------------------
 
 export const LoginSchema = z.object({
-  email: z.string().email("Invalid email address").nonempty("Email is required"), // Adds required validation
-  password: z.string().min(8, "Password must be at least 8 characters long.").nonempty("Password is required"), // Adds required validation
+  email: z.string().email("無効なメールアドレス").nonempty("Email is required"), // Adds required validation
+  password: z.string().nonempty("パスワードが必要です"), // Adds required validation
 });
 
 // For email (password reseting time )
 // ---------------------
 
 export const PasswordResetEmailSchema = z.object({
-  email: z.string().email("Invalid email address"),
+  email: z.string().email("無効なメールアドレス"),
 });

@@ -89,7 +89,7 @@ const UserList = () => {
         </TableHeader>
         <TableBody>
           {isLoading ? (
-            <TableRow>
+            <TableRow className="">
               <TableCell colSpan="5" className="text-center py-4">
                 <Spinner color="orange" />
               </TableCell>

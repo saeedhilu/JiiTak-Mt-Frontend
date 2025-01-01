@@ -4,7 +4,8 @@ import { clearAuth, updateToken } from '@/redux/slice/AuthSlice';
 import userRoutes from '@/routes/UserRoutes';
 
 const instance = axios.create({
-    baseURL: 'https://jii-tak-mt-backend-i5gg.vercel.app/',
+    // baseURL: 'https://brainy-evvie-saeed-self-stack-01feeb35.koyeb.app/',
+    baseURL: 'http://127.0.0.1:8000/',
     headers: { 'Content-Type': 'application/json' },
 });
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react"; 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import {
   BarChart,
@@ -41,26 +41,51 @@ const months = Object.keys(dataByMonth);
 const currentYear = new Date().getFullYear();
 
 function GenderAgeBarChart() {
+  const [chartWidth, setChartWidth] = useState(() => {
+    if (window.innerWidth > 670) return 523;
+    if (window.innerWidth > 540) return 450;
+    if (window.innerWidth > 470) return 350;
+    if (window.innerWidth > 440) return 320;
+    if (window.innerWidth > 407) return 290;
+    return 250;
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 670) {
+        setChartWidth(523);
+      } else if (window.innerWidth > 540) {
+        setChartWidth(450);
+      } else if(window.innerWidth > 470){
+        setChartWidth(350);
+      }else if(window.innerWidth > 407){
+        setChartWidth(290)
+      }else{
+        setChartWidth(250)
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   const [selectedDate, setSelectedDate] = useState(
     `${currentYear}-01`
-  ); // Default to the first month of the current year
-  const [selectedMonth, setSelectedMonth] = useState(months[0]); // Extracted month from the selected date
-  const chartData = dataByMonth[selectedMonth] || []; // Default to empty data
-  console.log('seelcted month is :', selectedMonth, selectedDate);
+  );
+  const [selectedMonth, setSelectedMonth] = useState(months[0]);
+  const chartData = dataByMonth[selectedMonth] || []; 
 
   const handleDateChange = (e) => {
     const selectedDate = e.target.value;
     setSelectedDate(selectedDate);
-    setSelectedMonth(selectedDate); // Extract the month and set the state directly
+    setSelectedMonth(selectedDate); 
   };
 
   const hasData = chartData.length > 0;
 
   return (
     <div className="p-2">
-      {/* Title and Date Picker */}
       <div className="flex justify-between items-center mb-4">
-        <h3 className="text-lg font-bold">性別・年代比</h3>
+        <h3 className="text-lg font-bold sm:text-xs sm:font-thin">性別・年代比</h3>
         <div className="flex items-center">
           <label htmlFor="date-picker" className="mr-2 font-medium">
             年月を選択:
@@ -75,9 +100,9 @@ function GenderAgeBarChart() {
         </div>
       </div>
 
-      {/* Bar Chart */}
       <BarChart
-        width={523}
+        
+        width={chartWidth}
         height={255}
         data={hasData ? chartData : [{ ageGroup: "No Data Available", male: 0, female: 0, other: 0, none: 0 }]}
         margin={{ top: 2, right: 2, left: 2, bottom: 5 }}
