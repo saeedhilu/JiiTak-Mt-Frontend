@@ -276,7 +276,7 @@ import {
   PaginationNext,
   PaginationEllipsis,
   generatePageNumbers
-} from "@/components/ui/Pagination";
+} from "@/components/ui/pagination";
 import { fetchUserData } from "@/services/users/fetchUserData";
 import Spinner from "@/components/spinner/Spinner";
 import { Input } from "@/components/ui/input";
