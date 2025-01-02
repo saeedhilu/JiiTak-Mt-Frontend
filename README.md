@@ -9,11 +9,8 @@
 1. [Overview](#overview)
 2. [Tech Stack](#tech-stack)
 3. [Features](#features)
-4. [Getting Started](#getting-started)
-5. [Using ShadCN](#using-shadcn)
 6. [Folder Structure](#folder-structure)
-7. [Contributing](#contributing)
-8. [License](#license)
+
 
 ---
 
