@@ -16,9 +16,13 @@ const Navbar = (color) => {
     const user = useSelector(state => state.auth.user);
 
     const handleLogout = () => {
-        dispatch(logout());
+        navigate('/user/home')
         showToast('Logout Successfully', 'success');
-        navigate('/login')
+        setTimeout(() => {
+            dispatch(logout());
+        }, 1000); 
+        
+        
     };
 
     return (

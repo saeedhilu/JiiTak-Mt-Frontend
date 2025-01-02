@@ -26,13 +26,12 @@
 // export default userRoutes;
 import UserLayout from "@/components/layouts/userLayout/UserLayout";
 
-import PasswordReset from "@/pages/auth/PasswordResetEmail";
-import PasswordResetPage from "@/pages/auth/PasswordResetPage";
+
 import NotFound from "@/pages/notFound/PageNotFound";
 import Home from "@/pages/users/Home";
 import { Routes, Route } from "react-router-dom";
 
-const AdminRoutes =() =>{
+const UserRoutes =() =>{
   return (
     <Routes>
       <Route path="/" element={<UserLayout />}>
@@ -45,4 +44,4 @@ const AdminRoutes =() =>{
     </Routes>
   )
 }
-export default AdminRoutes;
+export default UserRoutes

@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import UserRouts from "@/routes/UserRoutes"
 
 const initialState = {
   accessToken: null,
@@ -17,6 +18,7 @@ const authSlice = createSlice({
       state.user = user;
     },
     logout: (state) => {
+      
       state.accessToken = null;
       state.refreshToken = null;
       state.user = null;
