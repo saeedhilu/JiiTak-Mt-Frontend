@@ -91,35 +91,25 @@ Follow these steps to set up and run the project locally:
 2. Install dependencies
     ```bash
     npm install
-    # or
-    yarn install
-    ```
+    
 
-3. Create a `.env` file for environment variables
-    ```bash
-    cp .env.example .env
-    ```
-    Modify the `.env` file with your specific environment variables if needed, such as API URLs or authentication tokens.
 
-4. Run the development server
+3. Run the development server
     ```bash
     npm run dev
-    # or
-    yarn dev
+    
     ```
     Your application should now be available at `http://localhost:3000`.
 
-5. Build the application for production
+4. Build the application for production
     ```bash
     npm run build
-    # or
-    yarn build
+
     ```
     This will generate the optimized build files in the `dist/` directory.
 
-6. Preview the production build
+5. Preview the production build
     ```bash
     npm run preview
-    # or
-    yarn preview
+
     ```
