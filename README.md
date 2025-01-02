@@ -10,15 +10,16 @@
 2. [Tech Stack](#tech-stack)
 3. [Features](#features)
 4. [Getting Started](#getting-started)
-6. [Using ShadCN](#using-shadcn)
-8. [Folder Structure](#folder-structure)
-
+5. [Using ShadCN](#using-shadcn)
+6. [Folder Structure](#folder-structure)
+7. [Contributing](#contributing)
+8. [License](#license)
 
 ---
 
 ## **Overview**
 
-This frontend application is designed with **ShadCN UI Components** for modern, customizable, and accessible design. The project is fast and developer-friendly, using **Vite** as the build tool and **React.js** as the core framework.
+This frontend application is designed with **ShadCN UI Components** for a modern, customizable, and accessible design. The project prioritizes speed, scalability, and developer-friendliness, utilizing **Vite** as the build tool and **React.js** as the core framework.
 
 ---
 
@@ -27,20 +28,25 @@ This frontend application is designed with **ShadCN UI Components** for modern, 
 - **React.js** - Framework for building user interfaces.
 - **Vite** - Lightning-fast development environment.
 - **ShadCN** - UI components built on Tailwind CSS and Radix UI.
-- **Redux Toolkit** (or Context API) - State management.
-- **Axios** - For API requests.
+- **Redux Toolkit** (or Context API) - For state management.
+- **Axios** - To handle API requests.
+- **ESLint & Prettier** - Code linting and formatting.
 
 ---
 
 ## **Features**
 
-- Prebuilt ShadCN components for faster UI development.
-- Customizable and accessible UI with Tailwind CSS.
-- Authentication .
-- Responsive design.
+- Prebuilt ShadCN components for rapid UI development.
+- Accessible and customizable UI with Tailwind CSS.
+- Authentication and secure routing.
+- Responsive and mobile-first design.
+- Modular and scalable folder structure.
 
 ---
+
 ## **Folder Structure**
+
+```plaintext
 Admin-App/
 ├── dist/                 # Production build output
 ├── node_modules/         # Installed dependencies
@@ -72,11 +78,3 @@ Admin-App/
 ├── vite.config.js        # Vite configuration
 ├── userData.json         # Mock user data for testing
 └── vercel.json           # Vercel deployment configuration
-
-
-## **Getting Started**
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/project-frontend.git
-   cd project-frontend
