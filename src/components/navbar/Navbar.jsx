@@ -4,11 +4,13 @@ import { FaUserCircle } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '@/redux/slice/AuthSlice';
 import useToast from "@/hooks/UseToast";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = (color) => {
     console.log('color is :', color);
 
     const [showDropdown, setShowDropdown] = useState(false);
+    const navigate = useNavigate()
     const dispatch = useDispatch();
     const showToast = useToast();
     const user = useSelector(state => state.auth.user);
@@ -16,6 +18,7 @@ const Navbar = (color) => {
     const handleLogout = () => {
         dispatch(logout());
         showToast('Logout Successfully', 'success');
+        navigate('/login')
     };
 
     return (
