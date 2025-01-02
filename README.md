@@ -80,45 +80,46 @@ Admin-App/
 ## **Getting Started**
 
 ```plaintext
-
 Follow these steps to set up and run the project locally:
 
 1. Clone the repository
-bash
-Copy code
-git clone https://github.com/saeedhilu/JiiTak-Mt-Frontend.git
-cd admin-app
+    ```bash
+    git clone https://github.com/saeedhilu/JiiTak-Mt-Frontend.git
+    cd admin-app
+    ```
+
 2. Install dependencies
-bash
-Copy code
-npm install
-# or
-yarn install
-3. Create a .env file for environment variables
-bash
-Copy code
-cp .env.example .env
-Modify the .env file with your specific environment variables if needed, such as API URLs or authentication tokens.
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
+
+3. Create a `.env` file for environment variables
+    ```bash
+    cp .env.example .env
+    ```
+    Modify the `.env` file with your specific environment variables if needed, such as API URLs or authentication tokens.
 
 4. Run the development server
-bash
-Copy code
-npm run dev
-# or
-yarn dev
-Your application should now be available at http://localhost:3000.
+    ```bash
+    npm run dev
+    # or
+    yarn dev
+    ```
+    Your application should now be available at `http://localhost:3000`.
 
 5. Build the application for production
-bash
-Copy code
-npm run build
-# or
-yarn build
-This will generate the optimized build files in the dist/ directory.
+    ```bash
+    npm run build
+    # or
+    yarn build
+    ```
+    This will generate the optimized build files in the `dist/` directory.
 
 6. Preview the production build
-bash
-Copy code
-npm run preview
-# or
-yarn preview
+    ```bash
+    npm run preview
+    # or
+    yarn preview
+    ```
