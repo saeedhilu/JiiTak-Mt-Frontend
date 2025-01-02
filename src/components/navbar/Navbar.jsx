@@ -37,7 +37,7 @@ const Navbar = (color) => {
                                 </li>
                             ) : (
                                 <li className="cursor-pointer py-2 px-4 hover:bg-gray-100">
-                                    <a href="/user/login">Sign In</a>
+                                    <a href="/login">Sign In</a>
                                 </li>
                             )}
                         </ul>

@@ -1,7 +1,10 @@
 
-const Home =()=>{
-    <div>
-        Hey iam home Page
-    </div>
+const Home = () => {
+    return (
+        <div >
+            Hey iam home Page
+        </div>
+    )
+
 }
 export default Home;

@@ -11,13 +11,16 @@ import { Toaster } from 'sonner';
 import PasswordReset from './pages/auth/PasswordResetEmail';
 import PasswordResetPage from './pages/auth/PasswordResetPage';
 import SplashScreen from './components/splash/Splash';
+import ProtectedRoute from './routes/LoginPageProtector';
+import RoleProtecterRoute from './routes/RolebasedRoutes';
+import UnauthorizedPage from './pages/unauthorized/UnAuthorized';
 
 const AdminRoutes = lazy(() => import('./routes/AdminRoutes'));
 const UserRoutes = lazy(() => import('./routes/UserRoutes'));
 
 function App() {
   const queryClient = new QueryClient();
-  
+
   return (
     <Suspense fallback={<SplashScreen />}>
       <ErrorBoundary>
@@ -27,24 +30,53 @@ function App() {
               <QueryClientProvider client={queryClient}>
                 <Toaster richColors position="bottom-center" />
                 <Routes>
+                  {/* 
+        
+                  ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇ Admin Routes ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+                  
+                  */}
+
+
                   <Route
                     path="/admin/*"
                     element={
-
-                      <AdminRoutes />
+                      <RoleProtecterRoute allowedRoles={["admin"]}>
+                        <AdminRoutes />
+                      </RoleProtecterRoute>
 
                     }
                   />
+
+
+                  {/* 
+        
+                  ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇ User Routes ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+                  
+                  */}
+
                   <Route
                     path="/user/*"
                     element={
                       <UserRoutes />
                     }
                   />
+
+                  {/* 
+        
+                  ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇ Common auth Routes ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+                  
+                  */}
+
                   <Route path="/reset-password" element={<PasswordReset />} />
                   <Route path="/reset-password/:uid" element={<PasswordResetPage />} />
-                  <Route path="/login" element={<LoginPage />} />
+                  <Route path="/login" element={<ProtectedRoute element={LoginPage} />} />
+
+                  {/* Page Not Found */}
                   <Route path="*" element={<NotFound />} />
+
+                  {/* Unauthorized  */}
+                  <Route path="/unauthorized" element={<UnauthorizedPage />} />
+
                 </Routes>
               </QueryClientProvider>
             </Router>

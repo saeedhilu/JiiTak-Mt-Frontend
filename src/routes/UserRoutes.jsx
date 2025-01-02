@@ -24,19 +24,20 @@
 // ];
 
 // export default userRoutes;
-import AdminLayout from "@/components/layouts/adminLayout/AdminLayout";
+import UserLayout from "@/components/layouts/userLayout/UserLayout";
 
 import PasswordReset from "@/pages/auth/PasswordResetEmail";
 import PasswordResetPage from "@/pages/auth/PasswordResetPage";
 import NotFound from "@/pages/notFound/PageNotFound";
+import Home from "@/pages/users/Home";
 import { Routes, Route } from "react-router-dom";
 
 const AdminRoutes =() =>{
   return (
     <Routes>
-      <Route path="/" element={<AdminLayout />}>
+      <Route path="/" element={<UserLayout />}>
       
-      
+        <Route path="home" element={<Home/>}/>
       
       </Route>  
       
