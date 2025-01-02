@@ -23,6 +23,7 @@ import NotFound from "@/pages/notFound/PageNotFound";
 import { Routes, Route } from "react-router-dom";
 
 const AdminRoutes =() =>{
+  
   return (
     <Routes>
       <Route path="/" element={<AdminLayout />}>

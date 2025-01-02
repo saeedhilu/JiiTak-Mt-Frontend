@@ -17,7 +17,7 @@ const UserRoutes = lazy(() => import('./routes/UserRoutes'));
 
 function App() {
   const queryClient = new QueryClient();
-
+  
   return (
     <Suspense fallback={<SplashScreen />}>
       <ErrorBoundary>

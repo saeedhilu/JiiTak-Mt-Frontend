@@ -85,8 +85,8 @@ function GenderAgeBarChart() {
   return (
     <div className="p-2">
       <div className="flex justify-between items-center mb-4">
-        <h3 className="text-lg font-bold sm:text-xs sm:font-thin">性別・年代比</h3>
-        <div className="flex items-center">
+        <h3 className="text-sm sm:font-bold sm:text-lg ">性別・年代比</h3>
+        <div className="flex items-center flex-col sm:flex-row">
           <label htmlFor="date-picker" className="mr-2 font-medium">
             年月を選択:
           </label>

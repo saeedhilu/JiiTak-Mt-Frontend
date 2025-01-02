@@ -28,6 +28,7 @@ This frontend application is designed with **ShadCN UI Components** for a modern
 - **ShadCN** - UI components built on Tailwind CSS and Radix UI.
 - **Redux Toolkit** (or Context API) - For state management.
 - **Axios** - To handle API requests.
+- **Sonner** - For Toast.
 - **ESLint & Prettier** - Code linting and formatting.
 
 ---

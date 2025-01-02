@@ -19,7 +19,7 @@ const Navbar = (color) => {
     };
 
     return (
-        <nav className={`navbar flex justify-between p-4 shadow-sm  ${color ? `bg-${color.color}` : ''}`} aria-label="Main Navigation">
+        <nav className={`navbar sticky top-0 z-50 flex justify-between p-4 shadow-sm  ${color ? `bg-${color.color}` : ''}`} aria-label="Main Navigation">
             <a href="/" className="navbar-logo" aria-label="Go to home page">
                 <img src={logo} alt="Logo" className="navbar-logo-img" />
             </a>

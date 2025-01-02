@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardTitle, CardDescription } from '@/components/ui/card';
-
+import { RefreshCw } from "lucide-react";
 class ErrorBoundary extends React.Component {
     constructor(props) {
         super(props);
@@ -19,8 +19,8 @@ class ErrorBoundary extends React.Component {
     render() {
         if (this.state.hasError) {
             return (
-                <div className="p-8 bg-gray-100 rounded-lg min-h-screen justify-center shadow-md text-center">
-                    <Card className="bg-white max-w-lg mx-auto">
+                <div className="p-8 flex justify-center  items-center rounded-lg  text-center h-screen">
+                    <Card className="bg-white max-w-lg p-10 mx-auto ">
                         <CardContent>
                             <CardTitle className="text-2xl font-bold text-gray-900">
                                 Oops! Something went wrong.
@@ -33,13 +33,8 @@ class ErrorBoundary extends React.Component {
                                     onClick={() => window.location.reload()}
                                     className="bg-blue-600 text-white hover:bg-blue-700"
                                 >
+                                    <RefreshCw className="mr-2" />
                                     Refresh Page
-                                </Button>
-                                <Button
-                                    onClick={() => window.history.back()}
-                                    className="bg-gray-400 text-white hover:bg-gray-500"
-                                >
-                                    Go Back
                                 </Button>
                             </div>
                         </CardContent>
