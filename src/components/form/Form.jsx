@@ -16,10 +16,13 @@ const FormComponent = ({ fields, schema, onSubmit, title, notes, submitText, err
   const navigate = useNavigate();
   const {
     register,
-    handleSubmit,
+    handleSubmit, 
+
     formState: { errors, isSubmitting },
   } = useForm({
+     
     resolver: zodResolver(schema),
+    
   });
 
   const togglePasswordVisibility = () => {

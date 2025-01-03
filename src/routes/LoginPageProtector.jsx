@@ -6,7 +6,7 @@ const ProtectedRoute = ({ element: Component, ...rest }) => {
     const { user } = useSelector(
         (state) => state.auth
     );
-    c
+    
     const navigate = useNavigate();
     const location = useLocation();
 

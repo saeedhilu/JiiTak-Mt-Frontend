@@ -41,8 +41,8 @@ export default function LoginPage() {
       loading={isLoading}
       title="ログイン"
       fields={[
-        { name: "email", type: "email", label: "メールアドレス", placeholder: "" },
-        { name: "password", type: "password", label: "パスワード", placeholder: "" },
+        { name: "email", type: "email", label: "メールアドレス", placeholder: "admin@gmail.com" },
+        { name: "password", type: "password", label: "パスワード", placeholder: "123" },
       ]}
       schema={LoginSchema}
       onSubmit={onSubmit}
